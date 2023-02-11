@@ -83,7 +83,7 @@ img {
     color: var(--secondary-brand-color); 
 }
 
-.nav-link {
+.navigation {
     display: flex;
     align-items: center;
 }
@@ -93,11 +93,11 @@ img {
     margin-left: 93px;
 }
 
-.menu .item + .item {
+/*.menu*/ .menu__item + .menu__item {
     margin-left: 50px;
 }
 
-.menu .link.current {
+.menu /*.menu__link*/.current {
     color: var(--brand-color);
 }
 
@@ -116,7 +116,7 @@ img {
     border-radius: 2px;
 }
 
-.menu .link{
+.menu__link {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -134,16 +134,16 @@ img {
     margin-left: auto;
 }
 
-.connect-link {
+.connect__link {
     display: flex;
     align-items: center;
 }
 
-.connect .item + .item {
+/*.connect*/ .connect__item + .connect__item {
     margin-left: 50px;
 }
 
-.connect .link{
+.connect__link {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -151,8 +151,8 @@ img {
     color: var(--text-color);
 }
 
-.envelope-icon-header,
-.tel-icon-header {
+
+.connect__icon {
     margin-right: 10px;
     fill: var(--text-color);
 }
@@ -169,15 +169,12 @@ img {
     color: var(--brand-color);
 }
 
-.link .envelope-icon-header, 
-.link .tel-icon-header{
+.link .connect__icon {
     transition: fill var(--time-duration) var(--timing-function);
 }
 
-.link:hover .envelope-icon-header,
-.link:focus .envelope-icon-header, 
-.link:hover .tel-icon-header,
-.link:focus .tel-icon-header {
+.link:hover .connect__icon,
+.link:focus .connect__icon {
     fill: var(--brand-color);
 }
 
@@ -261,14 +258,14 @@ img {
      margin: -1px;
    }
 
-.list-exeptions {
+.exeptions {
     display: flex;
     flex-wrap: nowrap;
     margin-left: -15px;
     margin-right: -15px;
 }
 
-.item-exeptions {
+.exeptions__item {
     flex-basis: calc((100% - 90px)/4);
     margin-left: 15px;
     margin-right: 15px;
