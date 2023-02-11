@@ -271,7 +271,7 @@ img {
     margin-right: 15px;
 }
 
-.icon-container {
+.exeptions__container {
     display: flex;
     width: 270px;
     height: 120px;
@@ -283,7 +283,7 @@ img {
     background-color: var(--second-background-color);
 }
 
-.subtitle {
+.exeptions__subtitle {
     margin-bottom: 10px;
     font-weight: 700;
     font-size: 14px;
@@ -292,7 +292,7 @@ img {
     color: var(--title-color);
 }
 
-.text-particulars {
+.exeptions__text {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
@@ -300,11 +300,11 @@ img {
 /*====end section 2====*/
 
 /*====start section 3====*/
-.section-actions {
+.actions {
     padding-bottom: 94px;
 }
 
-.list-actions {
+.actions__list {
     display: flex;
     flex-wrap: wrap;
 }
@@ -320,15 +320,15 @@ img {
     color: var(--title-color);
 }
 
-.list-actions .item + .item {
+.actions__list .item + .item {
     margin-left: 30px;
 }
 
-.item-actions {
+.actions__item {
     position: relative;
 }
 
-.actions-descript {
+.actions__descript {
     display: block;
     width: 100%;
     padding-top: 27px;
@@ -352,22 +352,23 @@ img {
 /*====end section 3====*/
 
 /*====start section 4====*/
-.section-style{
+.team {
     background-color: var(--second-background-color) ;
 }
 
-.list-team {
+.team__list {
     display: flex; 
     margin-left: -30px;  
 }
-.photo-style {
-    flex-basis: calc((100% - 90)/4);
-    margin-left: 30px;
-   
+.team__photo {
     background-color: var(--third-brand-color);
 }
 
-.team-description {
+.team__photo + .team__photo {
+    margin-left: 30px;
+}
+
+.team__description {
     padding: 30px 32px;
     border-radius: 0px 0px 4px 4px; 
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -375,7 +376,7 @@ img {
         0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.subtitle-team {
+.team__subtitle {
     margin-bottom: 10px;
 
     font-weight: 500;
@@ -387,7 +388,7 @@ img {
     color: var(--title-color);
 }
 
-.team-title {
+.team__title {
     margin-bottom: 16px;
     font-weight: 400;
     font-size: 16px;
@@ -401,7 +402,7 @@ img {
     justify-content: space-between;
 }
 
-.social-list-link {
+.social-list__link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -413,34 +414,34 @@ img {
     transition: background-color var(--time-duration) var(--timing-function);
 }
 
-.social-list-link .social-list-icon {
+.social-list__link .social-list__icon {
     fill: var(--fill-color);
 
     transition: fill var(--time-duration) var(--timing-function);
 }
 
-.social-list-link:hover .social-list-icon,
-.social-list-link:focus .social-list-icon {
+.social-list__link:hover .social-list__icon,
+.social-list__link:focus .social-list__icon {
     fill: var(--third-brand-color); 
 }
 
-.social-list-link:hover,
-.social-list-link:focus {
+.social-list__link:hover,
+.social-list__link:focus {
     background-color: var(--brand-color);
 }
 /*====end section 4====*/
 
 /*====start section 5====*/
-.client-list {
+.client__list {
     display: flex;
     justify-content: center;
 }
 
-.client-list .client-item + .client-item {
+.client__list .client__item + .client__item {
     margin-left: 30px;
 }
 
-.client-list-link {
+.client__link {
     display: flex;
     width: 170px;
     height: 92px;
@@ -453,25 +454,25 @@ img {
     transition: border-color var(--time-duration) var(--timing-function);
 }
 
-.client-list-icon {
+.client__icon {
     fill: var(--fill-color);
     transition: fill var(--time-duration) var(--timing-function);
 }
 
-.client-list-link:hover .client-list-icon,
-.client-list-link:focus .client-list-icon {
+.client__link:hover .client__icon,
+.client__link:focus .client__icon {
     fill: var(--brand-color);    
 }
 
-.client-list-link:hover,
-.client-list-link:focus {
+.client__link:hover,
+.client__link:focus {
     border-color: var(--brand-color);
 }
 
 /*====end section 5====*/
 
 /*====start footer====*/
-.footer-style {
+.footer {
     padding-top: 60px;
     padding-bottom: 60px;
     
@@ -493,7 +494,7 @@ img {
     color: var(--third-brand-color);
 }
 
-.address-style {
+.container-address__style {
     margin-top: 20px;
 
     font-weight: 400;
@@ -512,21 +513,21 @@ address {
     margin-bottom: 9px; 
 }
 
-.footer-contact {
+.footer-list__contact {
     color: rgba(255, 255, 255, 0.6);
 
     transition: color var(--time-duration) var(--timing-function);
 }
 
-.item-footer {
+.foorer-list__item {
     margin-bottom: 9px;
 }
 .footer-list :last-child {
     margin-bottom: 0;
 }
 
-.footer-contact:hover,
-.footer-contact:focus {
+.footer-list__contact:hover,
+.footer-list__contact:focus {
     color: var(--brand-color);
 }
 
