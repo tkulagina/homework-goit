@@ -408,21 +408,25 @@ img {
     align-items: center;
     width: 44px;
     height: 44px;
-    border-radius: 50%;
+    border-radius: 50%;  
+}
+
+.social-list__icon-light {
     background-color: var(--third-brand-color);
 
     transition: background-color var(--time-duration) var(--timing-function);
 }
 
-.social-list__link .social-list__icon {
+.social-list__link .social-list__icon-light {
     fill: var(--fill-color);
 
     transition: fill var(--time-duration) var(--timing-function);
 }
 
-.social-list__link:hover .social-list__icon,
-.social-list__link:focus .social-list__icon {
+.social-list__link:hover .social-list__icon-light,
+.social-list__link:focus .social-list__icon-light {
     fill: var(--third-brand-color); 
+    background-color: var(--brand-color);  
 }
 
 .social-list__link:hover,
@@ -532,6 +536,7 @@ address {
 }
 
 .footer-social-list {
+    width: 206px;
     margin-right: 93px;
 }
 
@@ -546,33 +551,19 @@ address {
     color: var(--third-brand-color);
 }
 
-.footer-add-link {
-    display: flex;
-    justify-content: space-between;
+.social-list__link .social-list__icon-dark {
+    fill: var(--third-brand-color); 
 }
 
-.footer-add-link .footer-link-list + .footer-link-list {
-    margin-left: 10px;
-}
-
-.footer-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
+.footer-social-list .social-list__link {
     background-color: rgba(255, 255, 255, 0.1);
 
     transition: background-color var(--time-duration) var(--timing-function);
 }
 
-.footer-link-item {
-    fill: var(--third-brand-color);
-}
 
-.footer-link:hover,
-.footer-link:focus {
+.footer-social-list .social-list__link:hover,
+.footer-social-list .social-list__link:focus {
     background-color: var(--brand-color);
 }
 
@@ -739,7 +730,6 @@ address {
     display: flex;
     position: relative; 
     overflow: hidden;
-
 }
 
 .overlay-portfolio {
