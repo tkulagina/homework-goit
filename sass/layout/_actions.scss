@@ -5,6 +5,10 @@
 .actions__list {
     display: flex;
     flex-wrap: wrap;
+
+    & .item + .item {
+        margin-left: 30px;
+    }
 }
 
 .section-name {
@@ -16,10 +20,6 @@
     text-align: center;
        
     color: var(--title-color);
-}
-
-.actions__list .item + .item {
-    margin-left: 30px;
 }
 
 .actions__item {

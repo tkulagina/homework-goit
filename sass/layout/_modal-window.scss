@@ -11,16 +11,12 @@
 
     transition: opacity var(--time-duration) var(--timing-function),
         visibility var(--time-duration) var(--timing-function);
-}
 
-.backdrop.is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-}
-
-.backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(0.8);   
+        &.is-hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
 }
 
 .modal {
@@ -40,6 +36,11 @@
 
     transform: translate(-50%, -50%) scale(1);
     transition: scale var(--time-duration) var(--timing-function);
+
+    .backdrop.is-hidden & {
+        transform: translate(-50%, -50%) scale(0.8);   
+    }
+    
 }
 
 .modal-close-btn {
@@ -59,12 +60,12 @@
 
     background-color: var(--third-brand-color);
     cursor: pointer;
-}
 
-.modal-close-btn:hover .modal-close-icon,
-.modal-close-btn:focus .modal-close-icon {
-    fill: var(--brand-color);
-    transition: fill var(--time-duration) var(--timing-function);
+    &:hover .modal-close-icon,
+    &:focus .modal-close-icon {
+        fill: var(--brand-color);
+        transition: fill var(--time-duration) var(--timing-function);
+    }
 }
 
 .modal-title {
@@ -80,11 +81,11 @@
 }
 
 .contact-form-fields {
-    display: block;  
-}
-
-.contact-form .contact-form-fields + .contact-form-fields {
-    margin-top: 10px;
+    display: block;
+    
+    .contact-form & + & {
+        margin-top: 10px;
+    }  
 }
 
 .form-fields-title {
@@ -108,6 +109,13 @@
      
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+
+    &:focus {
+        outline: none;
+        border-color: var(--brand-color);
+    
+        transition: border-color var(--time-duration) var(--timing-function);
+    }
 }
 
 .form-fields-icon {
@@ -116,19 +124,12 @@
     left: 12px;
     transform: translateY(-50%); 
     fill: var(--title-color);  
-}
 
-.contact-form-input:focus {
-    outline: none;
-    border-color: var(--brand-color);
-
-    transition: border-color var(--time-duration) var(--timing-function);
-}
-
-.contact-form-input:focus + .form-fields-icon {
-    fill: var(--brand-color);
-
-    transition: fill var(--time-duration) var(--timing-function);
+    .contact-form-input:focus + & {
+        fill: var(--brand-color);
+    
+        transition: fill var(--time-duration) var(--timing-function);
+    }
 }
 
 .contact-form-comment {
@@ -140,22 +141,22 @@
    
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px; 
-}
 
-.contact-form-comment:focus {
-    outline: none;
-    border-color: var(--brand-color);
-
-    transition: border-color var(--time-duration) var(--timing-function);
-}
-
-.contact-form-comment::placeholder {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.01em;
-
-    color: rgba(117, 117, 117, 0.5);
+    &:focus {
+        outline: none;
+        border-color: var(--brand-color);
+    
+        transition: border-color var(--time-duration) var(--timing-function);
+    }
+    
+    &::placeholder {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.01em;
+    
+        color: rgba(117, 117, 117, 0.5);
+    }
 }
 
 .contact-form-checkbox-wrapper {
@@ -180,30 +181,30 @@
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-}
 
-.checkbox-description::before {
-    display: inline-block;
-    margin-right: 7px;
-    width: 16px;
-    height: 15px;
-    content: '';
-    cursor: pointer;
+    &::before {
+        display: inline-block;
+        margin-right: 7px;
+        width: 16px;
+        height: 15px;
+        content: '';
+        cursor: pointer;
+    
+        border: 2px solid var(--title-color);
+        border-radius: 4px;
+    }
+    
+    .contact-form-checkbox:focus + &::before {
+        border: 2px solid var(--brand-color);
+    }
 
-    border: 2px solid var(--title-color);
-    border-radius: 4px;
-}
-
-.contact-form-checkbox:focus + .checkbox-description::before {
-    border: 2px solid var(--brand-color);
-}
-
-.contact-form-checkbox:checked + .checkbox-description::before {
-    background-image: url(../images/icon-check.svg);
-    background-color: var(--brand-color);
-    background-size: contain;
-    background-origin: border-box;
-    border-color: var(--brand-color);
+    .contact-form-checkbox:checked + &::before {
+        background-image: url(../images/icon-check.svg);
+        background-color: var(--brand-color);
+        background-size: contain;
+        background-origin: border-box;
+        border-color: var(--brand-color);
+    }
 }
 
 .agreement {

@@ -11,29 +11,37 @@
 .menu {
     display: flex;
     margin-left: 93px;
+
+    transition: color var(--time-duration) var(--timing-function);
+
+    & .current {
+        color: var(--brand-color);
+    }
+
+    & a:hover,
+    & a:focus {
+        color: var(--brand-color);
+    }
 }
 
 .menu__item + .menu__item {
     margin-left: 50px;
 }
 
-.menu .current {
-    color: var(--brand-color);
-}
-
 .current {
     position: relative;
-}
-.current::after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    bottom: 0;
-    left: 0;
-    background: var(--brand-color);
-    border-radius: 2px;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        bottom: 0;
+        left: 0;
+        background: var(--brand-color);
+        border-radius: 2px;
+    }
 }
 
 .menu__link {
@@ -52,18 +60,21 @@
     display: flex;
     align-items: center;
     margin-left: auto;
+
+    & a{
+        transition: color var(--time-duration) var(--timing-function);
+    } 
+    
+    & a:hover,
+    & a:focus {
+        color: var(--brand-color);
+    }
 }
 
 .connect__link {
     display: flex;
     align-items: center;
-}
 
-.connect__item + .connect__item {
-    margin-left: 50px;
-}
-
-.connect__link {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -71,30 +82,22 @@
     color: var(--text-color);
 }
 
+.connect__item + .connect__item {
+    margin-left: 50px;
+}
+
 .connect__icon {
     margin-right: 10px;
     fill: var(--text-color);
-}
 
-.menu a,
-.connect a{
-    transition: color var(--time-duration) var(--timing-function);
-}
- 
-.menu a:hover,
-.menu a:focus,
-.connect a:hover,
-.connect a:focus {
-    color: var(--brand-color);
-}
-
-.link .connect__icon {
-    transition: fill var(--time-duration) var(--timing-function);
-}
-
-.link:hover .connect__icon,
-.link:focus .connect__icon {
-    fill: var(--brand-color);
+    .link & {
+        transition: fill var(--time-duration) var(--timing-function);
+    }
+    
+    .link:hover &,
+    .link:focus & {
+        fill: var(--brand-color);
+    }
 }
 
 .top-site {

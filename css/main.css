@@ -140,20 +140,23 @@ img {
   display: -ms-flexbox;
   display: flex;
   margin-left: 93px;
+  -webkit-transition: color var(--time-duration) var(--timing-function);
+  transition: color var(--time-duration) var(--timing-function);
+}
+.menu .current {
+  color: var(--brand-color);
+}
+.menu a:hover, .menu a:focus {
+  color: var(--brand-color);
 }
 
 .menu__item + .menu__item {
   margin-left: 50px;
 }
 
-.menu .current {
-  color: var(--brand-color);
-}
-
 .current {
   position: relative;
 }
-
 .current::after {
   content: "";
   display: block;
@@ -185,6 +188,13 @@ img {
           align-items: center;
   margin-left: auto;
 }
+.connect a {
+  -webkit-transition: color var(--time-duration) var(--timing-function);
+  transition: color var(--time-duration) var(--timing-function);
+}
+.connect a:hover, .connect a:focus {
+  color: var(--brand-color);
+}
 
 .connect__link {
   display: -webkit-box;
@@ -193,44 +203,25 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.connect__item + .connect__item {
-  margin-left: 50px;
-}
-
-.connect__link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   color: var(--text-color);
 }
 
+.connect__item + .connect__item {
+  margin-left: 50px;
+}
+
 .connect__icon {
   margin-right: 10px;
   fill: var(--text-color);
 }
-
-.menu a,
-.connect a {
-  -webkit-transition: color var(--time-duration) var(--timing-function);
-  transition: color var(--time-duration) var(--timing-function);
-}
-
-.menu a:hover,
-.menu a:focus,
-.connect a:hover,
-.connect a:focus {
-  color: var(--brand-color);
-}
-
 .link .connect__icon {
   -webkit-transition: fill var(--time-duration) var(--timing-function);
   transition: fill var(--time-duration) var(--timing-function);
 }
-
-.link:hover .connect__icon,
-.link:focus .connect__icon {
+.link:hover .connect__icon, .link:focus .connect__icon {
   fill: var(--brand-color);
 }
 
@@ -285,9 +276,7 @@ img {
   -webkit-transition: color var(--time-duration) var(--timing-function);
   transition: color var(--time-duration) var(--timing-function);
 }
-
-.button :hover,
-.button :focus {
+.button :hover, .button :focus {
   color: var(--active-button-color);
 }
 
@@ -350,6 +339,9 @@ img {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
+.actions__list .item + .item {
+  margin-left: 30px;
+}
 
 .section-name {
   margin-bottom: 50px;
@@ -358,10 +350,6 @@ img {
   line-height: 1.17;
   text-align: center;
   color: var(--title-color);
-}
-
-.actions__list .item + .item {
-  margin-left: 30px;
 }
 
 .actions__item {
@@ -401,7 +389,6 @@ img {
 .team__photo {
   background-color: var(--third-brand-color);
 }
-
 .team__photo + .team__photo {
   margin-left: 30px;
 }
@@ -437,15 +424,12 @@ img {
   -webkit-transition: background-color var(--time-duration) var(--timing-function);
   transition: background-color var(--time-duration) var(--timing-function);
 }
-
 .social-list__link .social-list__icon-light {
   fill: var(--fill-color);
   -webkit-transition: fill var(--time-duration) var(--timing-function);
   transition: fill var(--time-duration) var(--timing-function);
 }
-
-.social-list__link:hover .social-list__icon-light,
-.social-list__link:focus .social-list__icon-light {
+.social-list__link:hover .social-list__icon-light, .social-list__link:focus .social-list__icon-light {
   fill: var(--third-brand-color);
   background-color: var(--brand-color);
 }
@@ -463,7 +447,6 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
 }
-
 .client__list .client__item + .client__item {
   margin-left: 30px;
 }
@@ -485,21 +468,17 @@ img {
   -webkit-transition: border-color var(--time-duration) var(--timing-function);
   transition: border-color var(--time-duration) var(--timing-function);
 }
+.client__link:hover, .client__link:focus {
+  border-color: var(--brand-color);
+}
 
 .client__icon {
   fill: var(--fill-color);
   -webkit-transition: fill var(--time-duration) var(--timing-function);
   transition: fill var(--time-duration) var(--timing-function);
 }
-
-.client__link:hover .client__icon,
-.client__link:focus .client__icon {
+.client__link:hover .client__icon, .client__link:focus .client__icon {
   fill: var(--brand-color);
-}
-
-.client__link:hover,
-.client__link:focus {
-  border-color: var(--brand-color);
 }
 
 .footer {
@@ -547,6 +526,9 @@ address {
   -webkit-transition: color var(--time-duration) var(--timing-function);
   transition: color var(--time-duration) var(--timing-function);
 }
+.footer-list__contact:hover, .footer-list__contact:focus {
+  color: var(--brand-color);
+}
 
 .foorer-list__item {
   margin-bottom: 9px;
@@ -556,14 +538,17 @@ address {
   margin-bottom: 0;
 }
 
-.footer-list__contact:hover,
-.footer-list__contact:focus {
-  color: var(--brand-color);
-}
-
 .footer-social-list {
   width: 206px;
   margin-right: 93px;
+}
+.footer-social-list .social-list__link {
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-transition: background-color var(--time-duration) var(--timing-function);
+  transition: background-color var(--time-duration) var(--timing-function);
+}
+.footer-social-list .social-list__link:hover, .footer-social-list .social-list__link:focus {
+  background-color: var(--brand-color);
 }
 
 .footer-add {
@@ -580,17 +565,6 @@ address {
   fill: var(--third-brand-color);
 }
 
-.footer-social-list .social-list__link {
-  background-color: rgba(255, 255, 255, 0.1);
-  -webkit-transition: background-color var(--time-duration) var(--timing-function);
-  transition: background-color var(--time-duration) var(--timing-function);
-}
-
-.footer-social-list .social-list__link:hover,
-.footer-social-list .social-list__link:focus {
-  background-color: var(--brand-color);
-}
-
 .submit-mail {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -602,13 +576,17 @@ address {
   width: 358px;
   height: 50px;
   padding-left: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: transparent;
 }
-
 .submit-mail-field::-webkit-input-placeholder {
   font-weight: 400;
   font-size: 16px;
@@ -616,7 +594,6 @@ address {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
-
 .submit-mail-field::-moz-placeholder {
   font-weight: 400;
   font-size: 16px;
@@ -624,7 +601,6 @@ address {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
-
 .submit-mail-field:-ms-input-placeholder {
   font-weight: 400;
   font-size: 16px;
@@ -632,7 +608,6 @@ address {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
-
 .submit-mail-field::-ms-input-placeholder {
   font-weight: 400;
   font-size: 16px;
@@ -640,7 +615,6 @@ address {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
-
 .submit-mail-field::placeholder {
   font-weight: 400;
   font-size: 16px;
@@ -648,15 +622,6 @@ address {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
-
-.submit-mail-field {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
-}
-
 .submit-mail-field:focus {
   outline: none;
   color: var(--third-brand-color);
@@ -703,7 +668,6 @@ address {
           justify-content: center;
   margin-bottom: 50px;
 }
-
 .list-button .item-button + .item-button {
   margin-left: 8px;
 }
@@ -725,9 +689,7 @@ address {
   transition: color var(--time-duration) var(--timing-function), background-color var(--time-duration) var(--timing-function), box-shadow var(--time-duration) var(--timing-function);
   transition: color var(--time-duration) var(--timing-function), background-color var(--time-duration) var(--timing-function), box-shadow var(--time-duration) var(--timing-function), -webkit-box-shadow var(--time-duration) var(--timing-function);
 }
-
-.button-portfolio:hover,
-.button-portfolio:focus {
+.button-portfolio:hover, .button-portfolio:focus {
   color: var(--third-brand-color);
   background-color: var(--brand-color);
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -782,9 +744,7 @@ address {
   transition: box-shadow var(--time-duration) var(--timing-function);
   transition: box-shadow var(--time-duration) var(--timing-function), -webkit-box-shadow var(--time-duration) var(--timing-function);
 }
-
-.link-portfolio:hover,
-.link-portfolio:focus {
+.link-portfolio:hover, .link-portfolio:focus {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -812,7 +772,6 @@ address {
   transition: transform var(--time-duration) var(--timing-function);
   transition: transform var(--time-duration) var(--timing-function), -webkit-transform var(--time-duration) var(--timing-function);
 }
-
 .link-portfolio:hover .overlay-portfolio {
   -webkit-transform: translateY(0);
           transform: translateY(0);
@@ -838,16 +797,10 @@ address {
   -webkit-transition: opacity var(--time-duration) var(--timing-function), visibility var(--time-duration) var(--timing-function);
   transition: opacity var(--time-duration) var(--timing-function), visibility var(--time-duration) var(--timing-function);
 }
-
 .backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-}
-
-.backdrop.is-hidden .modal {
-  -webkit-transform: translate(-50%, -50%) scale(0.8);
-          transform: translate(-50%, -50%) scale(0.8);
 }
 
 .modal {
@@ -865,6 +818,10 @@ address {
           transform: translate(-50%, -50%) scale(1);
   -webkit-transition: scale var(--time-duration) var(--timing-function);
   transition: scale var(--time-duration) var(--timing-function);
+}
+.backdrop.is-hidden .modal {
+  -webkit-transform: translate(-50%, -50%) scale(0.8);
+          transform: translate(-50%, -50%) scale(0.8);
 }
 
 .modal-close-btn {
@@ -888,9 +845,7 @@ address {
   background-color: var(--third-brand-color);
   cursor: pointer;
 }
-
-.modal-close-btn:hover .modal-close-icon,
-.modal-close-btn:focus .modal-close-icon {
+.modal-close-btn:hover .modal-close-icon, .modal-close-btn:focus .modal-close-icon {
   fill: var(--brand-color);
   -webkit-transition: fill var(--time-duration) var(--timing-function);
   transition: fill var(--time-duration) var(--timing-function);
@@ -909,7 +864,6 @@ address {
 .contact-form-fields {
   display: block;
 }
-
 .contact-form .contact-form-fields + .contact-form-fields {
   margin-top: 10px;
 }
@@ -935,6 +889,12 @@ address {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
+.contact-form-input:focus {
+  outline: none;
+  border-color: var(--brand-color);
+  -webkit-transition: border-color var(--time-duration) var(--timing-function);
+  transition: border-color var(--time-duration) var(--timing-function);
+}
 
 .form-fields-icon {
   position: absolute;
@@ -944,14 +904,6 @@ address {
           transform: translateY(-50%);
   fill: var(--title-color);
 }
-
-.contact-form-input:focus {
-  outline: none;
-  border-color: var(--brand-color);
-  -webkit-transition: border-color var(--time-duration) var(--timing-function);
-  transition: border-color var(--time-duration) var(--timing-function);
-}
-
 .contact-form-input:focus + .form-fields-icon {
   fill: var(--brand-color);
   -webkit-transition: fill var(--time-duration) var(--timing-function);
@@ -967,14 +919,12 @@ address {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
-
 .contact-form-comment:focus {
   outline: none;
   border-color: var(--brand-color);
   -webkit-transition: border-color var(--time-duration) var(--timing-function);
   transition: border-color var(--time-duration) var(--timing-function);
 }
-
 .contact-form-comment::-webkit-input-placeholder {
   font-weight: 400;
   font-size: 12px;
@@ -982,7 +932,6 @@ address {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-
 .contact-form-comment::-moz-placeholder {
   font-weight: 400;
   font-size: 12px;
@@ -990,7 +939,6 @@ address {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-
 .contact-form-comment:-ms-input-placeholder {
   font-weight: 400;
   font-size: 12px;
@@ -998,7 +946,6 @@ address {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-
 .contact-form-comment::-ms-input-placeholder {
   font-weight: 400;
   font-size: 12px;
@@ -1006,7 +953,6 @@ address {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-
 .contact-form-comment::placeholder {
   font-weight: 400;
   font-size: 12px;
@@ -1053,7 +999,6 @@ address {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
-
 .checkbox-description::before {
   display: inline-block;
   margin-right: 7px;
@@ -1064,11 +1009,9 @@ address {
   border: 2px solid var(--title-color);
   border-radius: 4px;
 }
-
 .contact-form-checkbox:focus + .checkbox-description::before {
   border: 2px solid var(--brand-color);
 }
-
 .contact-form-checkbox:checked + .checkbox-description::before {
   background-image: url(../images/icon-check.svg);
   background-color: var(--brand-color);

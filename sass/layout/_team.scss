@@ -8,10 +8,10 @@
 }
 .team__photo {
     background-color: var(--third-brand-color);
-}
 
-.team__photo + .team__photo {
-    margin-left: 30px;
+    & + & {
+        margin-left: 30px;
+    }
 }
 
 .team__description {
@@ -47,18 +47,18 @@
     background-color: var(--third-brand-color);
 
     transition: background-color var(--time-duration) var(--timing-function);
-}
 
-.social-list__link .social-list__icon-light {
-    fill: var(--fill-color);
-
-    transition: fill var(--time-duration) var(--timing-function);
-}
-
-.social-list__link:hover .social-list__icon-light,
-.social-list__link:focus .social-list__icon-light {
-    fill: var(--third-brand-color); 
-    background-color: var(--brand-color);  
+    .social-list__link & {
+        fill: var(--fill-color);
+    
+        transition: fill var(--time-duration) var(--timing-function);
+    }
+    
+    .social-list__link:hover &,
+    .social-list__link:focus & {
+        fill: var(--third-brand-color); 
+        background-color: var(--brand-color);  
+    }
 }
 
 .social-list__link:hover,
